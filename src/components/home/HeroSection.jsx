@@ -634,10 +634,10 @@ const HeroSection = () => {
                   <FiSearch size={18} className="text-[#203568]" />
                   <span>Search universities, courses, or services...</span>
                 </div>
-                <div className="flex items-center gap-2">
+                {/* <div className="flex items-center gap-2">
                   <kbd className="hidden rounded bg-slate-100 px-2 py-1 text-xs font-semibold text-slate-600 sm:block">⌘</kbd>
                   <kbd className="hidden rounded bg-slate-100 px-2 py-1 text-xs font-semibold text-slate-600 sm:block">K</kbd>
-                </div>
+                </div> */}
               </motion.button>
             </motion.div>
 

@@ -94,25 +94,6 @@ const CountriesSection = () => {
                   <p className="mt-3 max-w-lg text-base font-medium text-white/85">{country.highlight}</p>
                 </div>
 
-                {/* Visa rate circle */}
-                {/* <div className="flex flex-col items-center gap-2">
-                  <div className="relative flex h-28 w-28 items-center justify-center">
-                    <svg className="absolute inset-0 -rotate-90" viewBox="0 0 100 100">
-                      <circle cx="50" cy="50" r="42" fill="none" stroke="rgba(255,255,255,0.15)" strokeWidth="8" />
-                      <circle
-                        cx="50" cy="50" r="42" fill="none"
-                        stroke="white" strokeWidth="8"
-                        strokeDasharray={`${2 * Math.PI * 42}`}
-                        strokeDashoffset={`${2 * Math.PI * 42 * (1 - country.visaRate / 100)}`}
-                        strokeLinecap="round"
-                      />
-                    </svg>
-                    <div className="text-center">
-                      <div className="text-2xl font-extrabold">{country.visaRate}%</div>
-                      <div className="text-[10px] font-bold uppercase tracking-wide text-white/70">Visa Rate</div>
-                    </div>
-                  </div>
-                </div> */}
               </div>
             </div>
 
@@ -240,7 +221,6 @@ const CountriesSection = () => {
             >
               <CountryFlag country={c} className="h-8 w-11 rounded-md" />
               <span className="text-[11px] font-bold text-slate-600">{c.accent}</span>
-              <span className="text-[10px] font-semibold text-secondary-600">{c.visaRate}%</span>
             </button>
           ))}
         </div>
