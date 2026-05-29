@@ -44,15 +44,15 @@ const HomePage = () => {
 
       <HeroSection />
       <QuickApplySection />
-      <ProcessSection />
+      {/* <ProcessSection /> */}
       <WhyChooseUs />
-      <ServicesSection />
+      {/* <ServicesSection /> */}
       <CountriesSection />
-      <TestPrepSection />
+      {/* <TestPrepSection /> */}
       <TeamSection />
-      <ReviewsSection />
-      <StoriesSection />
-      <CounselingCTA />
+      {/* <ReviewsSection /> */}
+      {/* <StoriesSection /> */}
+      {/* <CounselingCTA /> */}
       <FAQSection />
       <ContactSection />
     </>

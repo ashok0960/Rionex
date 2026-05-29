@@ -50,7 +50,6 @@ const CountryPage = () => {
     { icon: FiBookOpen,   label: 'Universities',     value: `${country.universities}+`, color: 'bg-red-100 text-[#D32028]' },
     { icon: FiCalendar,   label: 'Intake',           value: country.intake,     color: 'bg-blue-100 text-[#203568]' },
     { icon: FiCheckCircle,label: 'Min. IELTS',       value: country.ielts,      color: 'bg-blue-100 text-[#203568]' },
-    { icon: FiCheckCircle,label: 'Visa Success Rate',value: `${country.visaRate}%`, color: 'bg-green-50 text-green-700' },
   ];
 
   return (
@@ -75,10 +74,6 @@ const CountryPage = () => {
 
             {/* Visa rate badge + WhatsApp CTA */}
             <div className="mt-6 flex flex-wrap items-center gap-4">
-              <div className="inline-flex items-center gap-3 rounded-2xl border border-white/25 bg-white/15 px-5 py-3 backdrop-blur-sm">
-                <div className="text-3xl font-extrabold text-white">{country.visaRate}%</div>
-                <div className="text-sm font-semibold text-white/80">Visa success rate<br />at Rionex</div>
-              </div>
               <a
                 href={getWALink(country.name)}
                 target="_blank"

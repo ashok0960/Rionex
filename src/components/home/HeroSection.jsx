@@ -470,11 +470,7 @@ const UniversityCard = ({ university, index }) => {
           <span className="text-xs font-semibold text-[#203568]">{university.country}</span>
           <span className="text-[10px] text-slate-500">{university.intake}</span>
         </div>
-        {university.scholarship && (
-          <div className="mt-2 rounded-full bg-gradient-to-r from-amber-50 to-orange-50 px-2 py-0.5 text-center">
-            <span className="text-[9px] font-semibold text-amber-600">{university.scholarship} scholarship</span>
-          </div>
-        )}
+       
         <div className="mt-3 h-0.5 overflow-hidden rounded-full bg-slate-100">
           <motion.div
             initial={{ width: "0%" }}
@@ -659,7 +655,7 @@ const HeroSection = () => {
                 className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-gradient-to-r from-[#203568] to-[#D32028] px-6 py-2.5 text-sm font-bold text-white shadow-xl transition-all hover:shadow-2xl sm:px-7 sm:py-3 sm:text-base md:px-8 md:py-3.5"
               >
                 <span className="relative z-10 flex items-center gap-2">
-                  Book Free Consultation
+                  Book  Consultation
                   <FiArrowRight className="transition-transform duration-300 group-hover:translate-x-1" size={14} />
                 </span>
                 <motion.div
@@ -757,7 +753,7 @@ const HeroSection = () => {
               </div>
             </motion.div>
 
-            {/* Services Section */}
+            {/* Services Section
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -777,7 +773,7 @@ const HeroSection = () => {
                   <ServiceCard key={service.id} service={service} idx={idx} />
                 ))}
               </div>
-            </motion.div>
+            </motion.div> */}
           </div>
         </div>
       </motion.div>

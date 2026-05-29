@@ -7,7 +7,6 @@ export const countriesData = [
     flag: '🇦🇺',
     universities: 42,
     intake: 'Feb / July',
-    visaRate: 95,
     popularCourses: ['IT', 'Business', 'Engineering', 'Nursing'],
     highlight: 'Strong post-study work pathways',
     color: 'from-blue-600 to-cyan-500',

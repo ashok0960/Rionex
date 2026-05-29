@@ -269,7 +269,7 @@ const RevolutionaryNavbar = () => {
                             <CountryFlag country={c} />
                             <div>
                               <p className="text-sm font-bold text-ink group-hover:text-primary-700">{c.name}</p>
-                              <p className="text-[11px] text-slate-500">{c.visaRate}% visa · {c.intake}</p>
+                              <p className="text-[11px] text-slate-500"> {c.intake}</p>
                             </div>
                           </Link>
                         ))}

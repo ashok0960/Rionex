@@ -95,7 +95,7 @@ const CountriesSection = () => {
                 </div>
 
                 {/* Visa rate circle */}
-                <div className="flex flex-col items-center gap-2">
+                {/* <div className="flex flex-col items-center gap-2">
                   <div className="relative flex h-28 w-28 items-center justify-center">
                     <svg className="absolute inset-0 -rotate-90" viewBox="0 0 100 100">
                       <circle cx="50" cy="50" r="42" fill="none" stroke="rgba(255,255,255,0.15)" strokeWidth="8" />
@@ -112,7 +112,7 @@ const CountriesSection = () => {
                       <div className="text-[10px] font-bold uppercase tracking-wide text-white/70">Visa Rate</div>
                     </div>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
 
@@ -172,10 +172,10 @@ const CountriesSection = () => {
                     <p className="text-[10px] font-bold uppercase tracking-wide text-slate-400">Currency</p>
                     <p className="mt-1 text-sm font-extrabold text-ink">{country.currency}</p>
                   </div>
-                  <div className="rounded-xl bg-white p-3">
+                  {/* <div className="rounded-xl bg-white p-3">
                     <p className="text-[10px] font-bold uppercase tracking-wide text-slate-400">Visa rate</p>
                     <p className="mt-1 text-sm font-extrabold text-secondary-600">{country.visaRate}%</p>
-                  </div>
+                  </div> */}
                 </div>
               </div>
 
