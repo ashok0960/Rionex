@@ -6,6 +6,7 @@ import { FiArrowRight, FiClock, FiMail, FiMapPin, FiPhone, FiSend, FiX } from 'r
 import { FaWhatsapp } from 'react-icons/fa';
 import { useScrollAnimation } from '../../hooks/useScrollAnimation';
 import { contactConfig, telHref, whatsappUrl } from '../../config/contact';
+import { countriesData } from '../../data/countriesData';
 import ExactLocationMap from '../map/ExactLocationMap';
 
 const emptyForm = { name: '', email: '', phone: '', country: '', education: '', message: '' };
@@ -51,6 +52,12 @@ const ContactSection = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
+    if (contactConfig.emailJsPublicKey) {
+      emailjs.init(contactConfig.emailJsPublicKey);
+    }
+  }, []);
+
+  useEffect(() => {
     const openHandler = () => setIsOpen(true);
     window.addEventListener('rionex-contact-open', openHandler);
     return () => window.removeEventListener('rionex-contact-open', openHandler);
@@ -71,10 +78,13 @@ const ContactSection = () => {
     e.preventDefault();
     setLoading(true);
     const requestText = buildRequestText(form);
+    const subject = `Consultation request from ${form.name}`;
     const templateParams = {
       to_email: contactConfig.email,
       from_name: form.name,
       from_email: form.email,
+      reply_to: form.email,
+      subject,
       phone: form.phone,
       preferred_country: form.country || 'Not selected',
       education_level: form.education || 'Not selected',
@@ -83,8 +93,9 @@ const ContactSection = () => {
       message: form.message || 'No additional message provided.',
       request_text: requestText,
     };
+    const mailtoLink = `mailto:${contactConfig.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(requestText)}`;
 
-    if (contactConfig.emailJsServiceId && contactConfig.emailJsTemplateId && contactConfig.emailJsPublicKey) {
+    if (contactConfig.emailJsConfigured) {
       try {
         await emailjs.send(
           contactConfig.emailJsServiceId,
@@ -92,18 +103,15 @@ const ContactSection = () => {
           templateParams,
           contactConfig.emailJsPublicKey
         );
-        toast.success('Your message was sent to the office email successfully.', { duration: 5000 });
+        toast.success('Your message was sent to the office email successfully.', { duration: 2000 });
       } catch (error) {
-        const subject = encodeURIComponent(`Consultation request from ${form.name}`);
-        const body = encodeURIComponent(requestText);
-        window.location.href = `mailto:${contactConfig.email}?subject=${subject}&body=${body}`;
-        toast.success('EmailJS failed. Message opened in email app instead.', { duration: 5000 });
+        console.error('EmailJS send error:', error);
+        toast.error('EmailJS failed. Opening in email app instead.', { duration: 2000 });
+        window.location.href = mailtoLink;
       }
     } else {
-      const subject = encodeURIComponent(`Consultation request from ${form.name}`);
-      const body = encodeURIComponent(requestText);
-      window.location.href = `mailto:${contactConfig.email}?subject=${subject}&body=${body}`;
-      toast.success('EmailJS is not configured. Message opened in email app instead.', { duration: 5000 });
+      toast.error('EmailJS is not configured. Opening in email app instead.', { duration: 2000 });
+      window.location.href = mailtoLink;
     }
 
     setForm(emptyForm);
@@ -237,7 +245,8 @@ const ContactSection = () => {
                             <Field label="Preferred Country">
                               <select name="country" value={form.country} onChange={onChange} className={inputCls}>
                                 <option value="">Select country</option>
-                                {['Australia', 'USA', 'United Kingdom', 'Canada', 'Japan', 'Germany', 'South Korea', 'Cyprus'].map((country) => <option key={country}>{country}</option>)}
+                                {countriesData.map((country) => <option key={country.name}>{country.name}</option>)}
+                                <option value="Other">Other</option>
                               </select>
                             </Field>
                             <Field label="Education Level">
@@ -396,7 +405,8 @@ const ContactSection = () => {
                     <Field label="Preferred Country">
                       <select name="country" value={form.country} onChange={onChange} className={inputCls}>
                         <option value="">Select country</option>
-                        {['Australia', 'USA', 'United Kingdom', 'Canada', 'Japan', 'Germany', 'South Korea', 'Cyprus'].map((country) => <option key={country}>{country}</option>)}
+                        {countriesData.map((country) => <option key={country.name}>{country.name}</option>)}
+                        <option value="Other">Other</option>
                       </select>
                     </Field>
                     <Field label="Education Level">

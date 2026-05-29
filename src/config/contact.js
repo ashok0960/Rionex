@@ -8,9 +8,11 @@ export const contactConfig = {
   fullAddress: import.meta.env.VITE_OFFICE_FULL_ADDRESS || 'Near Bhaktapur Bus Stop, 31 Bag Bazar Sadak, Kathmandu 44600',
   // Combine office hours and closed day into a single display string
   officeHours: `${import.meta.env.VITE_OFFICE_HOURS || 'Sun-Fri / 10Am - 5Pm'}; ${import.meta.env.VITE_OFFICE_CLOSED || 'Saturday closed'}`,
-  emailJsServiceId: import.meta.env.VITE_EMAILJS_SERVICE_ID || 'service_ad41qpg',
-  emailJsTemplateId: import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'template_0n5x92l',
-  emailJsPublicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY || '3uKOPwORCrXNBLJbO',
+  emailJsServiceId: import.meta.env.VITE_EMAILJS_SERVICE_ID,
+  emailJsTemplateId: import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+  emailJsPublicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+  emailJsConfigured:
+    Boolean(import.meta.env.VITE_EMAILJS_SERVICE_ID && import.meta.env.VITE_EMAILJS_TEMPLATE_ID && import.meta.env.VITE_EMAILJS_PUBLIC_KEY),
 };
 
 export const telHref = (phone) => `tel:+977${phone.replace(/^0/, '')}`;
