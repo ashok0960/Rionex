@@ -95,31 +95,6 @@ const QuickApplySection = () => {
               </form>
             </div>
 
-            {/* Right Side */}
-            <div className="hidden flex-col justify-center gap-6 border-l border-slate-100 bg-slate-50 px-8 py-6 lg:flex">
-              {[
-                { v: '98%', l: 'Visa success' },
-                { v: '5000+', l: 'Students placed' },
-                { v: '10+', l: 'Years experience' },
-              ].map(({ v, l }) => (
-                <div key={l} className="flex items-center gap-3">
-                  <FiCheckCircle
-                    size={18}
-                    className="shrink-0 text-green-500"
-                  />
-
-                  <div>
-                    <div className="text-2xl font-extrabold text-slate-900">
-                      {v}
-                    </div>
-
-                    <div className="text-xs font-semibold uppercase tracking-wide text-slate-500">
-                      {l}
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
           </div>
         </motion.div>
       </div>

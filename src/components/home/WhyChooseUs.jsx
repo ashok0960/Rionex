@@ -4,7 +4,7 @@ import { useScrollAnimation } from '../../hooks/useScrollAnimation';
 
 const reasons = [
   { icon: FiShield,        n: '01', title: 'Visa-Aware Planning',   desc: 'Every shortlist is reviewed against academic profile, finance, destination rules, and risk factors.' },
-  { icon: FiUsers,         n: '02', title: 'Human Counseling',      desc: 'Students get direct counselor support — not a generic checklist or automated system.' },
+  { icon: FiUsers,         n: '02', title: 'Human Counseling',      desc: 'Students get direct counselor support not a generic checklist or automated system.' },
   { icon: FiFileText,      n: '03', title: 'Document Excellence',   desc: 'SOP, LOR, financials, and forms reviewed with practical submission standards and checkpoints.' },
   { icon: FiClock,         n: '04', title: 'Fast Processing',       desc: 'Clear next steps, reminders, and file checks keep your application moving on schedule.' },
   { icon: FiAward,         n: '05', title: 'Decade of Experience',  desc: 'Ten years of student placement across major study destinations worldwide.' },
@@ -31,29 +31,15 @@ const WhyChooseUs = () => {
             transition={{ duration: 0.6 }}
             className="lg:sticky lg:top-28"
           >
-            <span className="eyebrow">Why Rionex</span>
+            <span className="eyebrow">Why Rionex ?</span>
             <h2 className="section-title mt-5">
               A process built around{' '}
               <span className="gradient-text bg-gradient-to-r from-[#203568] to-[#D32028]">clarity and outcomes</span>
             </h2>
             <p className="mt-5 text-base leading-7 text-slate-600">
-              Rionex combines counseling, documentation, and visa readiness into one practical workflow — so students move forward with confidence, not confusion.
+              Rionex combines counseling, documentation, and visa readiness into one practical workflow so students move forward with confidence, not confusion.
             </p>
 
-            {/* Big stat */}
-            <div className="mt-10 grid grid-cols-2 gap-4">
-              {[
-                { v: '98%', l: 'Visa success rate' },
-                { v: '10+', l: 'Years of experience' },
-                { v: '5000+', l: 'Students placed' },
-                { v: '500+', l: 'Partner universities' },
-              ].map(({ v, l }) => (
-                <div key={l} className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
-                  <div className="text-3xl font-extrabold text-ink">{v}</div>
-                  <div className="mt-1 text-xs font-semibold uppercase tracking-wide text-slate-500">{l}</div>
-                </div>
-              ))}
-            </div>
 
             {/* Partner logos strip */}
             <div className="mt-8">

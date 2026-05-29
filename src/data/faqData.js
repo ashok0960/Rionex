@@ -3,7 +3,7 @@ export const faqData = [
     id: 1,
     category: 'General',
     question: 'How do I start the study abroad process?',
-    answer: 'Start with a free counseling session at Rionex. We assess your academic background, budget, preferred country, and career goals — then build a personalized roadmap covering university selection, documents, visa, and departure.',
+    answer: 'Start with a free counseling session at Rionex. We assess your academic background, budget, preferred country, and career goals then build a personalized roadmap covering university selection, documents, visa, and departure.',
   },
   {
     id: 2,
@@ -15,7 +15,7 @@ export const faqData = [
     id: 3,
     category: 'Visa',
     question: 'What is the visa success rate at Rionex?',
-    answer: 'Our overall visa success rate is 98%. We prepare every file with a thorough checklist, mock interviews, GTE/SOP review, and financial document guidance — minimizing refusal risk significantly.',
+    answer: 'Our overall visa success rate is 98%. We prepare every file with a thorough checklist, mock interviews, GTE/SOP review, and financial document guidance minimizing refusal risk significantly.',
   },
   {
     id: 4,
@@ -27,13 +27,13 @@ export const faqData = [
     id: 5,
     category: 'Documents',
     question: 'What documents do I need to apply to a university abroad?',
-    answer: 'Typically: academic transcripts, SOP (Statement of Purpose), LOR (Letters of Recommendation), English test scores (IELTS/PTE/TOEFL), passport copy, CV/resume, and financial documents. Requirements vary by country and university — we provide a complete checklist.',
+    answer: 'Typically: academic transcripts, SOP (Statement of Purpose), LOR (Letters of Recommendation), English test scores (IELTS/PTE/TOEFL), passport copy, CV/resume, and financial documents. Requirements vary by country and university we provide a complete checklist.',
   },
   {
     id: 6,
     category: 'Documents',
     question: 'Can Rionex help me write my SOP?',
-    answer: 'Yes. Our document team provides structured SOP guidance, draft reviews, and final editing. We ensure your SOP reflects your genuine profile, academic goals, and destination fit — not a generic template.',
+    answer: 'Yes. Our document team provides structured SOP guidance, draft reviews, and final editing. We ensure your SOP reflects your genuine profile, academic goals, and destination fit not a generic template.',
   },
   {
     id: 7,

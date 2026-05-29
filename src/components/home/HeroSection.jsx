@@ -584,7 +584,7 @@ const HeroSection = () => {
                 <span className="hidden sm:inline-block w-px h-3 bg-slate-300 mx-2" />
                 <span className="hidden sm:inline-flex items-center gap-1">
                   <FiStar size={12} className="text-amber-500" />
-                  4.9/5 Rating
+                  4.2/5 Rating
                 </span>
               </div>
             </motion.div>
@@ -753,27 +753,6 @@ const HeroSection = () => {
               </div>
             </motion.div>
 
-            {/* Services Section
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.9 }}
-              className="mt-6"
-            >
-              <div className="mb-4 text-center">
-                <div className="flex items-center justify-center gap-2">
-                  <FiAward className="text-[#203568]" size={18} />
-                  <p className="text-xs font-bold uppercase tracking-wider text-[#203568] sm:text-sm">Services We Offer</p>
-                </div>
-                <p className="mt-2 text-sm font-semibold text-slate-600">Comprehensive support for your study abroad journey</p>
-              </div>
-
-              <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 md:grid-cols-5">
-                {servicesData.map((service, idx) => (
-                  <ServiceCard key={service.id} service={service} idx={idx} />
-                ))}
-              </div>
-            </motion.div> */}
           </div>
         </div>
       </motion.div>

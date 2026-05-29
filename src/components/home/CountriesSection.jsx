@@ -119,7 +119,6 @@ const CountriesSection = () => {
             {/* Key info grid */}
             <div className="grid divide-y divide-slate-100 sm:grid-cols-2 sm:divide-x sm:divide-y-0 lg:grid-cols-4">
               {[
-                { icon: FiDollarSign,  label: 'Tuition / Year',    value: country.tuition,   color: 'bg-blue-100 text-[#203568]' },
                 { icon: FiHome,        label: 'Living / Month',    value: country.living,    color: 'bg-green-50 text-green-700' },
                 { icon: FiBriefcase,   label: 'Work Rights',       value: country.workRights, color: 'bg-red-100 text-[#D32028]' },
                 { icon: FiTrendingUp,  label: 'PR Pathway',        value: country.prPathway, color: 'bg-blue-100 text-[#203568]' },
@@ -141,7 +140,6 @@ const CountriesSection = () => {
               {[
                 { icon: FiBookOpen,    label: 'Partner Universities', value: `${country.universities}+` },
                 { icon: FiCalendar,    label: 'Intake Months',        value: country.intake },
-                { icon: FiCheckCircle, label: 'Min. IELTS Score',     value: country.ielts },
               ].map(({ icon: Icon, label, value }) => (
                 <div key={label} className="flex items-center gap-4 p-5">
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-primary-50 text-primary-700">
@@ -172,10 +170,7 @@ const CountriesSection = () => {
                     <p className="text-[10px] font-bold uppercase tracking-wide text-slate-400">Currency</p>
                     <p className="mt-1 text-sm font-extrabold text-ink">{country.currency}</p>
                   </div>
-                  {/* <div className="rounded-xl bg-white p-3">
-                    <p className="text-[10px] font-bold uppercase tracking-wide text-slate-400">Visa rate</p>
-                    <p className="mt-1 text-sm font-extrabold text-secondary-600">{country.visaRate}%</p>
-                  </div> */}
+        
                 </div>
               </div>
 
@@ -184,7 +179,7 @@ const CountriesSection = () => {
                 <div className="mt-3 space-y-2">
                   {[
                     `Apply around 3-4 months before ${country.intake} intake.`,
-                    `Prepare funds for ${country.tuition} tuition and ${country.living} living cost.`,
+                    `Prepare funds for  ${country.living} living cost.`,
                     `Target IELTS score: ${country.ielts}.`,
                   ].map((note) => (
                     <div key={note} className="flex gap-2 text-sm text-slate-700">

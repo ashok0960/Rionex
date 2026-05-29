@@ -43,13 +43,11 @@ const CountryPage = () => {
   }
 
   const infoGrid = [
-    { icon: FiDollarSign, label: 'Tuition / Year',   value: country.tuition,    color: 'bg-blue-100 text-[#203568]' },
     { icon: FiHome,       label: 'Living / Month',   value: country.living,     color: 'bg-green-50 text-green-700' },
     { icon: FiBriefcase,  label: 'Work Rights',      value: country.workRights, color: 'bg-red-100 text-[#D32028]' },
     { icon: FiTrendingUp, label: 'PR Pathway',       value: country.prPathway,  color: 'bg-blue-100 text-[#203568]' },
     { icon: FiBookOpen,   label: 'Universities',     value: `${country.universities}+`, color: 'bg-red-100 text-[#D32028]' },
     { icon: FiCalendar,   label: 'Intake',           value: country.intake,     color: 'bg-blue-100 text-[#203568]' },
-    { icon: FiCheckCircle,label: 'Min. IELTS',       value: country.ielts,      color: 'bg-blue-100 text-[#203568]' },
   ];
 
   return (

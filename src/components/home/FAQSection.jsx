@@ -74,7 +74,7 @@ const FAQSection = () => {
             {/* CTA block */}
             <div className="mt-4 hidden rounded-2xl border border-primary-100 bg-primary-50 p-5 lg:block">
               <p className="text-sm font-bold text-ink">Still have questions?</p>
-              <p className="mt-1 text-xs leading-5 text-slate-600">Our counselors are available {contactConfig.officeHours}. {contactConfig.closedDay}.</p>
+              <p className="mt-1 text-xs leading-5 text-slate-600">Our counselors are available {contactConfig.officeHours}. {contactConfig.closedDay}</p>
               <button
                 type="button"
                 onClick={() => scrollToSection('contact')}

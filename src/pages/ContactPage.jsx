@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { AnimatePresence, motion } from 'framer-motion';
-import emailjs from 'emailjs-com';
+import emailjs from '@emailjs/browser';
 import toast from 'react-hot-toast';
 import { FiArrowRight, FiClock, FiMail, FiMapPin, FiPhone, FiSend } from 'react-icons/fi';
 import { FaWhatsapp } from 'react-icons/fa';
